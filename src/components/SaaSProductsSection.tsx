@@ -34,10 +34,10 @@ export function SaaSProductsSection() {
               <span className="text-slate-500 font-medium z-10">Mockup do Sistema</span>
             </div>
 
-            <button className="self-start px-6 py-3 rounded-xl bg-transparent border border-slate-700 hover:bg-slate-800 hover:border-cyan-glow/50 text-white font-medium transition-all flex items-center gap-2">
+            <a href="#contato" className="self-start px-6 py-3 rounded-xl bg-transparent border border-slate-700 hover:bg-slate-800 hover:border-cyan-glow/50 text-white font-medium transition-all flex items-center gap-2">
               Conhecer o Produto
               <ChevronRight size={18} />
-            </button>
+            </a>
           </div>
 
           {/* Product 2: Sistema PDV Inteligente */}
@@ -57,10 +57,10 @@ export function SaaSProductsSection() {
               <span className="text-slate-500 font-medium z-10">Mockup do PDV</span>
             </div>
 
-            <button className="self-start px-6 py-3 rounded-xl bg-transparent border border-slate-700 hover:bg-slate-800 hover:border-electric-blue/50 text-white font-medium transition-all flex items-center gap-2">
+            <a href="#contato" className="self-start px-6 py-3 rounded-xl bg-transparent border border-slate-700 hover:bg-slate-800 hover:border-electric-blue/50 text-white font-medium transition-all flex items-center gap-2">
               Solicitar Demonstração
               <ChevronRight size={18} />
-            </button>
+            </a>
           </div>
         </div>
       </div>
