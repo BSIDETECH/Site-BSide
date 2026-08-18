@@ -13,6 +13,8 @@ import {
 import { useState } from 'react';
 import { DataConsultingSection } from './components/DataConsultingSection';
 import { SaaSProductsSection } from './components/SaaSProductsSection';
+import { ContactSection } from './components/ContactSection';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -227,26 +229,12 @@ function App() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section id="contact" className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900"></div>
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display">Pronto para escalar com a gente?</h2>
-            <p className="text-xl text-slate-400 mb-10">
-              Nossa equipe de engenheiros e especialistas em dados está pronta para entender o seu negócio e propor a melhor solução tecnológica.
-            </p>
-            <a
-              href="https://wa.me/5511999999999"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-electric-blue text-white font-medium text-lg hover:bg-electric-blue-hover hover:shadow-lg hover:shadow-electric-blue/25 transition-all hover:scale-105"
-            >
-              Fale com um Especialista
-            </a>
-            <p className="mt-4 text-sm text-slate-500">Respondemos em até 24 horas úteis.</p>
-          </div>
-        </section>
+        {/* Contact Section */}
+        <ContactSection />
       </main>
+
+      {/* Floating WhatsApp Button */}
+      <FloatingWhatsApp />
 
       {/* Footer */}
       <footer className="bg-slate-950 border-t border-slate-900 py-12">
