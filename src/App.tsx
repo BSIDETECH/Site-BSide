@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { DataConsultingSection } from './components/DataConsultingSection';
+import { SaaSProductsSection } from './components/SaaSProductsSection';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -90,6 +91,9 @@ function App() {
 
         {/* Data Consulting Section */}
         <DataConsultingSection />
+
+        {/* SaaS Products Ecosystem */}
+        <SaaSProductsSection />
 
         {/* Consulting Services */}
         <section id="services" className="py-24 bg-slate-900/50 border-y border-slate-800/50">
