@@ -30,8 +30,8 @@ export function SaaSProductsSection() {
             </p>
 
             <div className="bg-slate-800 aspect-video rounded-xl mb-8 border border-slate-700/50 flex items-center justify-center relative overflow-hidden group-hover:border-cyan-glow/30 transition-colors">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-glow/5 to-transparent"></div>
-              <span className="text-slate-500 font-medium z-10">Mockup do Sistema</span>
+              <img src="/images/comanda-mobile.png" alt="Interface Mobile da Comanda Digital" className="w-full h-full object-cover relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-glow/5 to-transparent pointer-events-none z-20"></div>
             </div>
 
             <a href="#contato" className="self-start px-6 py-3 rounded-xl bg-transparent border border-slate-700 hover:bg-slate-800 hover:border-cyan-glow/50 text-white font-medium transition-all flex items-center gap-2">
@@ -53,8 +53,8 @@ export function SaaSProductsSection() {
             </p>
 
             <div className="bg-slate-800 aspect-video rounded-xl mb-8 border border-slate-700/50 flex items-center justify-center relative overflow-hidden group-hover:border-electric-blue/30 transition-colors">
-              <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/5 to-transparent"></div>
-              <span className="text-slate-500 font-medium z-10">Mockup do PDV</span>
+              <img src="/images/adega-desktop.png" alt="Dashboard do Sistema PDV para Adegas" className="w-full h-full object-cover relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/5 to-transparent pointer-events-none z-20"></div>
             </div>
 
             <a href="#contato" className="self-start px-6 py-3 rounded-xl bg-transparent border border-slate-700 hover:bg-slate-800 hover:border-electric-blue/50 text-white font-medium transition-all flex items-center gap-2">
