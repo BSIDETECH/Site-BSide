@@ -1,1 +1,0 @@
-exclude after include images in the directory
