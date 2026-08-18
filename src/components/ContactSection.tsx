@@ -2,7 +2,7 @@ import { Mail, Clock, MapPin, ChevronRight } from 'lucide-react';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-slate-950 border-t border-slate-900">
+    <section id="contato" className="py-24 relative overflow-hidden bg-slate-950 border-t border-slate-900">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900/50 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -80,11 +80,11 @@ function App() {
               Construímos a infraestrutura digital do futuro para empresas que buscam eficiência, inteligência e crescimento acelerado.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#services" className="px-8 py-4 rounded-full bg-electric-blue text-white font-medium hover:bg-electric-blue-hover transition-colors flex items-center gap-2 w-full sm:w-auto justify-center shadow-lg shadow-electric-blue/20">
+              <a href="#dados" className="px-8 py-4 rounded-full bg-electric-blue text-white font-medium hover:bg-electric-blue-hover transition-colors flex items-center gap-2 w-full sm:w-auto justify-center shadow-lg shadow-electric-blue/20">
                 Conheça nossas soluções
                 <ChevronRight size={20} />
               </a>
-              <a href="#contact" className="px-8 py-4 rounded-full bg-transparent border-2 border-slate-700 hover:border-slate-500 hover:bg-slate-800/50 transition-colors text-white font-medium w-full sm:w-auto justify-center flex">
+              <a href="https://wa.me/5515998139561?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20B-Side%20e%20gostaria%20de%20falar%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20Dados%20e%20SaaS." target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-full bg-transparent border-2 border-slate-700 hover:border-slate-500 hover:bg-slate-800/50 transition-colors text-white font-medium w-full sm:w-auto justify-center flex">
                 Fale com um Especialista
               </a>
             </div>
