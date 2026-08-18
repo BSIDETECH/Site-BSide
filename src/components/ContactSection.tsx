@@ -1,11 +1,9 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
 import { Mail, Clock, MapPin, ChevronRight } from 'lucide-react';
-import { submitContact } from '../actions/contact';
 
 export function ContactSection() {
-  const [isPending, startTransition] = useTransition();
   const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,15 +11,24 @@ export function ContactSection() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    setSuccessMessage('');
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const interest = formData.get('interest') as string;
+    const message = formData.get('message') as string;
 
-    startTransition(async () => {
-      const result = await submitContact(formData);
-      if (result.success) {
-        setSuccessMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-        form.reset();
-      }
-    });
+    const text = `Olá, vim pelo site da B-Side Tech!
+*Nome:* ${name}
+*E-mail:* ${email}
+*Interesse:* ${interest}
+*Mensagem:* ${message}`;
+
+    const encodedText = encodeURIComponent(text);
+    const url = `https://wa.me/5515998139561?text=${encodedText}`;
+
+    window.open(url, '_blank');
+
+    setSuccessMessage('Redirecionando para o WhatsApp...');
+    form.reset();
   };
 
   return (
@@ -136,11 +143,10 @@ export function ContactSection() {
 
               <button
                 type="submit"
-                disabled={isPending}
                 className="w-full py-4 rounded-xl bg-electric-blue text-white font-medium hover:bg-electric-blue-hover transition-colors flex items-center justify-center gap-2 group shadow-lg shadow-electric-blue/20 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {isPending ? 'Enviando...' : 'Enviar Mensagem'}
-                {!isPending && <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />}
+                Enviar Mensagem
+                <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
 
               {successMessage && (
