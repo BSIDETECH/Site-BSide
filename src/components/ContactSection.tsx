@@ -1,6 +1,29 @@
+'use client';
+
+import { useState, useTransition } from 'react';
 import { Mail, Clock, MapPin, ChevronRight } from 'lucide-react';
+import { submitContact } from '../actions/contact';
 
 export function ContactSection() {
+  const [isPending, startTransition] = useTransition();
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    setSuccessMessage('');
+
+    startTransition(async () => {
+      const result = await submitContact(formData);
+      if (result.success) {
+        setSuccessMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        form.reset();
+      }
+    });
+  };
+
   return (
     <section id="contato" className="py-24 relative overflow-hidden bg-slate-950 border-t border-slate-900">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900/50 pointer-events-none"></div>
@@ -57,12 +80,13 @@ export function ContactSection() {
 
           {/* Formulário */}
           <div className="bg-slate-900/50 p-8 rounded-3xl border border-slate-800 backdrop-blur-sm">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-slate-300 block">Nome completo</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-electric-blue focus:ring-1 focus:ring-electric-blue transition-all"
                   placeholder="Seu nome"
                   required
@@ -74,6 +98,7 @@ export function ContactSection() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-electric-blue focus:ring-1 focus:ring-electric-blue transition-all"
                   placeholder="seu@email.com.br"
                   required
@@ -84,6 +109,7 @@ export function ContactSection() {
                 <label htmlFor="interest" className="text-sm font-medium text-slate-300 block">Interesse</label>
                 <select
                   id="interest"
+                  name="interest"
                   defaultValue=""
                   className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-electric-blue focus:ring-1 focus:ring-electric-blue transition-all appearance-none cursor-pointer"
                   required
@@ -100,6 +126,7 @@ export function ContactSection() {
                 <label htmlFor="message" className="text-sm font-medium text-slate-300 block">Mensagem</label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-electric-blue focus:ring-1 focus:ring-electric-blue transition-all resize-none"
                   placeholder="Como podemos ajudar sua empresa?"
@@ -109,11 +136,18 @@ export function ContactSection() {
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-electric-blue text-white font-medium hover:bg-electric-blue-hover transition-colors flex items-center justify-center gap-2 group shadow-lg shadow-electric-blue/20"
+                disabled={isPending}
+                className="w-full py-4 rounded-xl bg-electric-blue text-white font-medium hover:bg-electric-blue-hover transition-colors flex items-center justify-center gap-2 group shadow-lg shadow-electric-blue/20 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Enviar Mensagem
-                <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                {isPending ? 'Enviando...' : 'Enviar Mensagem'}
+                {!isPending && <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />}
               </button>
+
+              {successMessage && (
+                <div className="mt-4 p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 text-sm text-center">
+                  {successMessage}
+                </div>
+              )}
             </form>
           </div>
         </div>
