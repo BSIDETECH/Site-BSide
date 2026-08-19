@@ -15,6 +15,7 @@ import { DataConsultingSection } from './components/DataConsultingSection';
 import { SaaSProductsSection } from './components/SaaSProductsSection';
 import { ContactSection } from './components/ContactSection';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { FeatureCard } from './components/FeatureCard';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -107,37 +108,28 @@ function App() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Card 1 */}
-              <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-electric-blue/50 transition-colors group">
-                <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-electric-blue/10 transition-colors">
-                  <Database className="text-electric-blue" size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 font-display">Data Engineering</h3>
-                <p className="text-slate-400 leading-relaxed">
-                  Arquitetura de dados robusta, pipelines escaláveis e data lakes seguros para centralizar e processar suas informações.
-                </p>
-              </div>
+              <FeatureCard
+                icon={Database}
+                title="Data Engineering"
+                description="Arquitetura de dados robusta, pipelines escaláveis e data lakes seguros para centralizar e processar suas informações."
+                colorTheme="electric-blue"
+              />
 
               {/* Card 2 */}
-              <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-cyan-glow/50 transition-colors group">
-                <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-glow/10 transition-colors">
-                  <BarChart3 className="text-cyan-glow" size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 font-display">Business Intelligence</h3>
-                <p className="text-slate-400 leading-relaxed">
-                  Dashboards interativos e relatórios em tempo real para transformar dados brutos em decisões estratégicas precisas.
-                </p>
-              </div>
+              <FeatureCard
+                icon={BarChart3}
+                title="Business Intelligence"
+                description="Dashboards interativos e relatórios em tempo real para transformar dados brutos em decisões estratégicas precisas."
+                colorTheme="cyan-glow"
+              />
 
               {/* Card 3 */}
-              <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-electric-blue/50 transition-colors group">
-                <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-electric-blue/10 transition-colors">
-                  <Brain className="text-electric-blue" size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-3 font-display">AI Solutions</h3>
-                <p className="text-slate-400 leading-relaxed">
-                  Modelos preditivos, automação inteligente e machine learning aplicados para otimizar processos e reduzir custos.
-                </p>
-              </div>
+              <FeatureCard
+                icon={Brain}
+                title="AI Solutions"
+                description="Modelos preditivos, automação inteligente e machine learning aplicados para otimizar processos e reduzir custos."
+                colorTheme="electric-blue"
+              />
             </div>
           </div>
         </section>
