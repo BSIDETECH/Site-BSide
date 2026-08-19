@@ -25,7 +25,7 @@ export function ContactSection() {
     const encodedText = encodeURIComponent(text);
     const url = `https://wa.me/5515998139561?text=${encodedText}`;
 
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
 
     setSuccessMessage('Redirecionando para o WhatsApp...');
     form.reset();
