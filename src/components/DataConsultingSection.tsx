@@ -19,6 +19,9 @@ export function DataConsultingSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Card 1 */}
           <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-electric-blue/50 hover:shadow-lg hover:shadow-electric-blue/10 hover:-translate-y-1 transition-all duration-300 group">
+            <div className="w-full h-32 bg-slate-800 rounded-xl mb-6 overflow-hidden border border-slate-700/50">
+              <img src="/images/data-pipeline.png" alt="Arquitetura de Dados" className="w-full h-full object-cover" />
+            </div>
             <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-electric-blue/20 transition-colors">
               <Database className="text-electric-blue" size={28} />
             </div>
@@ -30,6 +33,9 @@ export function DataConsultingSection() {
 
           {/* Card 2 */}
           <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-cyan-glow/50 hover:shadow-lg hover:shadow-cyan-glow/10 hover:-translate-y-1 transition-all duration-300 group">
+            <div className="w-full h-32 bg-slate-800 rounded-xl mb-6 overflow-hidden border border-slate-700/50">
+              <img src="/images/powerbi-dashboard.png" alt="Dashboard Power BI" className="w-full h-full object-cover" />
+            </div>
             <div className="w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-glow/20 transition-colors">
               <BarChart3 className="text-cyan-glow" size={28} />
             </div>
