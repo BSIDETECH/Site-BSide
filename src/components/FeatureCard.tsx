@@ -4,32 +4,32 @@ interface FeatureCardProps {
   icon: ElementType;
   title: string;
   description: string;
-  colorTheme?: 'electric-blue' | 'cyan-glow';
+  colorTheme?: 'theme-primary' | 'theme-accent';
 }
 
 export function FeatureCard({
   icon: Icon,
   title,
   description,
-  colorTheme = 'electric-blue',
+  colorTheme = 'theme-primary',
 }: FeatureCardProps) {
-  const isElectricBlue = colorTheme === 'electric-blue';
+  const isElectricBlue = colorTheme === 'theme-primary';
 
   return (
     <div
-      className={`bg-slate-900 border border-slate-800 p-8 rounded-2xl transition-colors group ${
-        isElectricBlue ? 'hover:border-electric-blue/50' : 'hover:border-cyan-glow/50'
+      className={`bg-theme-bg-alt border border-theme-border p-8 rounded-2xl transition-colors group ${
+        isElectricBlue ? 'hover:border-theme-primary/50' : 'hover:border-theme-accent/50'
       }`}
     >
       <div
-        className={`w-14 h-14 bg-slate-800 rounded-xl flex items-center justify-center mb-6 transition-colors ${
-          isElectricBlue ? 'group-hover:bg-electric-blue/10' : 'group-hover:bg-cyan-glow/10'
+        className={`w-14 h-14 bg-theme-bg-alt rounded-xl flex items-center justify-center mb-6 transition-colors ${
+          isElectricBlue ? 'group-hover:bg-theme-primary/10' : 'group-hover:bg-theme-accent/10'
         }`}
       >
-        <Icon className={isElectricBlue ? 'text-electric-blue' : 'text-cyan-glow'} size={28} />
+        <Icon className={isElectricBlue ? 'text-theme-primary' : 'text-theme-accent'} size={28} />
       </div>
       <h3 className="text-xl font-bold mb-3 font-display">{title}</h3>
-      <p className="text-slate-400 leading-relaxed">{description}</p>
+      <p className="text-theme-text-muted leading-relaxed">{description}</p>
     </div>
   );
 }

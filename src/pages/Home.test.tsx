@@ -43,20 +43,21 @@ describe('App Component', () => {
     // Let's get the button that is inside the header and is for the mobile menu. It has the text 'Serviços' only once before click.
     // Actually, looking at the code, it doesn't have an aria-label. Let's find it by looking for the button containing the Menu lucide icon, but since it's an SVG, it's easier to find the button inside the header that doesn't have text.
     // Alternatively, we can find it by getting all buttons and picking the first one (which is the mobile menu button in the header).
-    const buttons = screen.getAllByRole('button');
-    const mobileMenuButton = buttons[0]; // The mobile menu button is the first button in the document
+    // The ThemeSwitcher has 2 buttons (desktop & mobile) with aria-label.
+    // We filter them out to find the actual menu toggle button.
+    const menuToggleBtn = screen.getAllByRole('button').filter(btn => btn.getAttribute('aria-label') !== 'Theme switcher')[0];
 
     // Initial state: 1 "Serviços" link (Desktop)
     expect(screen.getAllByText('Serviços')).toHaveLength(1);
 
     // Click to open
-    fireEvent.click(mobileMenuButton);
+    fireEvent.click(menuToggleBtn);
 
     // After click: 2 "Serviços" links (Desktop + Mobile)
     expect(screen.getAllByText('Serviços')).toHaveLength(2);
 
     // Click to close
-    fireEvent.click(mobileMenuButton);
+    fireEvent.click(menuToggleBtn);
 
     // After second click: back to 1 link
     expect(screen.getAllByText('Serviços')).toHaveLength(1);
@@ -65,9 +66,8 @@ describe('App Component', () => {
   it('closes mobile menu when a mobile menu link is clicked', () => {
     render(<Home />);
 
-    const buttons = screen.getAllByRole('button');
-    const mobileMenuButton = buttons[0];
-    fireEvent.click(mobileMenuButton);
+    const menuToggleBtn = screen.getAllByRole('button').filter(btn => btn.getAttribute('aria-label') !== 'Theme switcher')[0];
+    fireEvent.click(menuToggleBtn);
 
     // Verify it's open
     expect(screen.getAllByText('Serviços')).toHaveLength(2);
