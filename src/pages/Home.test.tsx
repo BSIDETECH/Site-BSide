@@ -1,32 +1,32 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import App from './App';
+import Home from './Home';
 import { describe, it, expect, vi } from 'vitest';
 
 // Mock the child components to simplify testing the App component's core functionality (the menu state)
-vi.mock('./components/DataConsultingSection', () => ({
+vi.mock('../components/DataConsultingSection', () => ({
   DataConsultingSection: () => <div data-testid="data-consulting-section" />
 }));
-vi.mock('./components/SaaSProductsSection', () => ({
+vi.mock('../components/SaaSProductsSection', () => ({
   SaaSProductsSection: () => <div data-testid="saas-products-section" />
 }));
-vi.mock('./components/ContactSection', () => ({
+vi.mock('../components/ContactSection', () => ({
   ContactSection: () => <div data-testid="contact-section" />
 }));
-vi.mock('./components/FloatingWhatsApp', () => ({
+vi.mock('../components/FloatingWhatsApp', () => ({
   FloatingWhatsApp: () => <div data-testid="floating-whatsapp" />
 }));
-vi.mock('./components/FeatureCard', () => ({
+vi.mock('../components/FeatureCard', () => ({
   FeatureCard: ({ title }: { title: string }) => <div data-testid={`feature-card-${title}`} />
 }));
 
 describe('App Component', () => {
   it('renders correctly', () => {
-    render(<App />);
+    render(<Home />);
     expect(screen.getAllByText('B-Side Tech')[0]).toBeInTheDocument();
   });
 
   it('mobile menu is initially closed', () => {
-    render(<App />);
+    render(<Home />);
     // On desktop, links are visible, but the mobile menu links have specific text/classes
     // Since we use the same text ("Serviços"), we can check if the mobile menu container is absent.
     // The mobile menu container is inside a condition: {isMobileMenuOpen && (...)}
@@ -36,7 +36,7 @@ describe('App Component', () => {
   });
 
   it('toggles mobile menu when button is clicked', () => {
-    render(<App />);
+    render(<Home />);
 
     // The mobile menu button contains the Menu icon initially
     // Since there are multiple buttons (e.g., Solicitar Demonstração), let's find the menu button by aria-label if exists, or by getting the specific one.
@@ -63,7 +63,7 @@ describe('App Component', () => {
   });
 
   it('closes mobile menu when a mobile menu link is clicked', () => {
-    render(<App />);
+    render(<Home />);
 
     const buttons = screen.getAllByRole('button');
     const mobileMenuButton = buttons[0];
