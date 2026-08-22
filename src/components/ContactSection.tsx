@@ -33,7 +33,6 @@ export function ContactSection() {
 
   return (
     <section id="contato" className="py-24 relative overflow-hidden bg-theme-bg border-t border-theme-border">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 to-slate-900/50 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -94,7 +93,7 @@ export function ContactSection() {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full bg-theme-bg-alt border border-theme-border rounded-xl px-4 py-3 text-theme-text placeholder-slate-500 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all"
+                  className="w-full bg-theme-bg-alt border border-theme-border rounded-xl px-4 py-3 text-theme-text placeholder-theme-text-muted/50 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all"
                   placeholder="Seu nome"
                   required
                 />
@@ -106,7 +105,7 @@ export function ContactSection() {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full bg-theme-bg-alt border border-theme-border rounded-xl px-4 py-3 text-theme-text placeholder-slate-500 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all"
+                  className="w-full bg-theme-bg-alt border border-theme-border rounded-xl px-4 py-3 text-theme-text placeholder-theme-text-muted/50 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all"
                   placeholder="seu@email.com.br"
                   required
                 />
@@ -135,7 +134,7 @@ export function ContactSection() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full bg-theme-bg-alt border border-theme-border rounded-xl px-4 py-3 text-theme-text placeholder-slate-500 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all resize-none"
+                  className="w-full bg-theme-bg-alt border border-theme-border rounded-xl px-4 py-3 text-theme-text placeholder-theme-text-muted/50 focus:outline-none focus:border-theme-primary focus:ring-1 focus:ring-theme-primary transition-all resize-none"
                   placeholder="Como podemos ajudar sua empresa?"
                   required
                 ></textarea>

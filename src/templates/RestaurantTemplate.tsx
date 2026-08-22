@@ -3,19 +3,19 @@ import type { RestaurantData } from '../data/restaurantTemplateTypes';
 
 export default function RestaurantTemplate({ data }: { data: RestaurantData }) {
   return (
-    <div className={`min-h-screen font-sans selection:bg-red-500 selection:text-theme-text ${data.colors.background} ${data.colors.text}`}>
+    <div className={`min-h-screen font-sans selection:bg-theme-primary selection:text-theme-text ${data.colors.background} ${data.colors.text}`}>
       {/* Hero Section */}
       <header className="relative pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden px-4">
         {/* Fundo abstrato vermelho/laranja para o Burgelo */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-theme-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10">
           {/* Logo / Brand - Mockup do Logo Real */}
-          <div className="mb-8 flex flex-col items-center justify-center p-6 bg-white rounded-full shadow-[0_0_40px_rgba(220,38,38,0.3)] w-48 h-48 sm:w-56 sm:h-56">
-            <div className={`w-16 h-16 rounded-full border-4 border-white mb-2 flex items-center justify-center ${data.colors.accent} text-theme-text shadow-inner`}>
-               <Flame size={32} fill="white" className="mt-1" />
+          <div className="mb-8 flex flex-col items-center justify-center p-6 bg-theme-bg-alt rounded-full shadow-xl shadow-theme-primary/20 border border-theme-border w-48 h-48 sm:w-56 sm:h-56">
+            <div className={`w-16 h-16 rounded-full border-4 border-theme-bg mb-2 flex items-center justify-center ${data.colors.accent} text-theme-bg shadow-inner`}>
+               <Flame size={32} className="mt-1 text-theme-bg" />
             </div>
-            <h1 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tighter uppercase leading-none">{data.name}</h1>
+            <h1 className="text-3xl sm:text-4xl font-black text-theme-text tracking-tighter uppercase leading-none">{data.name}</h1>
             <p className="text-xs sm:text-sm font-bold text-theme-text-muted uppercase tracking-widest mt-1">{data.subtitle}</p>
           </div>
 
@@ -59,9 +59,9 @@ export default function RestaurantTemplate({ data }: { data: RestaurantData }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {data.products.map((product, index) => (
-              <div key={index} className="bg-theme-bg rounded-2xl overflow-hidden border border-theme-border hover:border-slate-600 transition-colors group">
+              <div key={index} className="bg-theme-bg rounded-2xl overflow-hidden border border-theme-border hover:border-theme-primary/50 transition-colors group">
                 <div className="h-48 w-full bg-theme-bg-alt relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent z-10 opacity-60"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60"></div>
                   {/* Image placeholder - simulate a nice food background */}
                   <div className="absolute inset-0 flex items-center justify-center bg-theme-bg-alt group-hover:scale-105 transition-transform duration-500">
                     <span className="text-sm uppercase font-semibold tracking-wider text-theme-text-muted">Foto {product.name}</span>

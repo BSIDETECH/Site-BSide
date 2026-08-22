@@ -22,57 +22,57 @@ export function WebDevelopmentSection() {
           {/* Pain Points (Sem Site) */}
           <div className="bg-theme-bg-alt/50 border border-theme-border rounded-3xl p-8 lg:p-10">
             <h3 className="text-2xl font-bold text-theme-text mb-6 flex items-center gap-3">
-              <XCircle className="text-red-500" size={28} />
+              <XCircle className="text-theme-primary" size={28} />
               O Custo de Não Estar Online
             </h3>
             <ul className="space-y-5">
               <li className="flex gap-4">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-theme-primary mt-2 flex-shrink-0"></div>
                 <p className="text-theme-text-muted"><strong className="text-theme-text">Invisibilidade Local:</strong> Você perde vendas todos os dias para concorrentes que aparecem quando o cliente pesquisa "onde comer" no Google.</p>
               </li>
               <li className="flex gap-4">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-theme-primary mt-2 flex-shrink-0"></div>
                 <p className="text-theme-text-muted"><strong className="text-theme-text">Refém de Taxas:</strong> Depender 100% de apps de delivery significa pagar até 27% de taxa em cada pedido, reduzindo drasticamente seu lucro.</p>
               </li>
               <li className="flex gap-4">
-                <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-theme-primary mt-2 flex-shrink-0"></div>
                 <p className="text-theme-text-muted"><strong className="text-theme-text">Amadorismo Online:</strong> Mandar um PDF pesado no WhatsApp ou não ter um cardápio digital profissional afasta clientes exigentes.</p>
               </li>
             </ul>
           </div>
 
           {/* Benefits (Com Site da B-Side) */}
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-theme-border rounded-3xl p-8 lg:p-10 relative overflow-hidden shadow-2xl shadow-theme-accent/5">
-            <div className="absolute -top-24 -right-24 w-48 h-48 bg-theme-accent/20 rounded-full blur-3xl"></div>
+          <div className="bg-theme-bg-alt/50 border border-theme-border rounded-3xl p-8 lg:p-10 relative overflow-hidden shadow-2xl shadow-theme-accent/5">
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-theme-accent/10 rounded-full blur-3xl pointer-events-none"></div>
             <h3 className="text-2xl font-bold text-theme-text mb-6 flex items-center gap-3 relative z-10">
-              <CheckCircle2 className="text-cyan-400" size={28} />
+              <CheckCircle2 className="text-theme-accent" size={28} />
               A Solução B-Side Tech
             </h3>
             <ul className="space-y-5 relative z-10">
               <li className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-theme-bg/50 border border-theme-border flex items-center justify-center flex-shrink-0">
-                  <Search size={20} className="text-cyan-400" />
+                <div className="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center flex-shrink-0">
+                  <Search size={20} className="text-theme-accent" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-200 mb-1">Máquina de Descoberta (SEO)</h4>
+                  <h4 className="font-bold text-theme-text mb-1">Máquina de Descoberta (SEO)</h4>
                   <p className="text-sm text-theme-text-muted">Seja encontrado facilmente no Google Maps. Transforme turistas e novos moradores em clientes reais na sua mesa.</p>
                 </div>
               </li>
               <li className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-theme-bg/50 border border-theme-border flex items-center justify-center flex-shrink-0">
-                  <Globe size={20} className="text-cyan-400" />
+                <div className="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center flex-shrink-0">
+                  <Globe size={20} className="text-theme-accent" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-200 mb-1">Vendas sem Taxas</h4>
+                  <h4 className="font-bold text-theme-text mb-1">Vendas sem Taxas</h4>
                   <p className="text-sm text-theme-text-muted">Canalize pedidos direto para o seu WhatsApp ou integre com nosso PDV. Lucro 100% seu, sem intermediários.</p>
                 </div>
               </li>
               <li className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-theme-bg/50 border border-theme-border flex items-center justify-center flex-shrink-0">
-                  <Smartphone size={20} className="text-cyan-400" />
+                <div className="w-10 h-10 rounded-xl bg-theme-bg border border-theme-border flex items-center justify-center flex-shrink-0">
+                  <Smartphone size={20} className="text-theme-accent" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-200 mb-1">Cardápio Sempre Atualizado</h4>
+                  <h4 className="font-bold text-theme-text mb-1">Cardápio Sempre Atualizado</h4>
                   <p className="text-sm text-theme-text-muted">Site rápido, visual incrível no celular (Mobile-First) e integração com o sistema de caixa. Mudou o preço lá, atualiza no site.</p>
                 </div>
               </li>
@@ -85,7 +85,7 @@ export function WebDevelopmentSection() {
             href="https://wa.me/5515998139561?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20sites%20para%20meu%20neg%C3%B3cio."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-cyan-600 hover:bg-cyan-500 text-theme-text font-bold transition-all shadow-lg shadow-cyan-600/20"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-theme-primary hover:bg-theme-primary-hover text-theme-text font-bold transition-all shadow-lg shadow-theme-primary/20"
           >
             Quero um Site para Meu Negócio
             <ArrowRight size={20} />

@@ -6,11 +6,11 @@ export const burgeloData: RestaurantData = {
   heroTitle: 'O Melhor Hambúrguer Artesanal da Cidade',
   heroDescription: 'Sabor autêntico, ingredientes frescos e aquele ambiente perfeito para curtir com a família e amigos.',
   colors: {
-    background: 'bg-slate-950',
-    text: 'text-slate-50',
-    accent: 'bg-red-600', // Tema Burgelo (chama vermelha)
-    accentText: 'text-white',
-    priceText: 'text-red-400',
+    background: 'bg-theme-bg',
+    text: 'text-theme-text',
+    accent: 'bg-theme-primary',
+    accentText: 'text-theme-bg',
+    priceText: 'text-theme-primary',
   },
   links: {
     whatsapp: 'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido%21', // Fictício

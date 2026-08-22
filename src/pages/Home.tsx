@@ -91,7 +91,7 @@ export default function Home() {
                 Conheça nossas soluções
                 <ChevronRight size={20} />
               </a>
-              <a href="https://wa.me/5515998139561?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20B-Side%20e%20gostaria%20de%20falar%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20Dados%20e%20SaaS." target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-full bg-transparent border-2 border-theme-border hover:border-slate-500 hover:bg-theme-bg-alt/50 transition-colors text-theme-text font-medium w-full sm:w-auto justify-center flex">
+              <a href="https://wa.me/5515998139561?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20B-Side%20e%20gostaria%20de%20falar%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20Dados%20e%20SaaS." target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-full bg-transparent border-2 border-theme-border hover:border-theme-primary/50 hover:bg-theme-bg-alt/50 transition-colors text-theme-text font-medium w-full sm:w-auto justify-center flex">
                 Fale com um Especialista
               </a>
             </div>
@@ -146,7 +146,7 @@ export default function Home() {
         {/* Flagship Product */}
         <section id="product" className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-br from-slate-900 to-slate-950 border border-theme-border rounded-3xl overflow-hidden flex flex-col lg:flex-row items-center relative">
+            <div className="bg-theme-bg-alt border border-theme-border rounded-3xl overflow-hidden flex flex-col lg:flex-row items-center relative">
               <div className="absolute top-0 right-0 w-96 h-96 bg-theme-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
 
               <div className="p-10 lg:p-16 lg:w-1/2 relative z-10">
@@ -201,7 +201,7 @@ export default function Home() {
                   {/* App Content */}
                   <div className="flex-1 p-6 flex flex-col">
                     <div className="w-24 h-4 bg-theme-bg-alt rounded-full mb-6"></div>
-                    <div className="w-full h-32 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl mb-4 border border-theme-border/50 p-4">
+                    <div className="w-full h-32 bg-theme-bg rounded-2xl mb-4 border border-theme-border/50 p-4">
                       <div className="w-16 h-4 bg-theme-border rounded-full mb-2"></div>
                       <div className="w-32 h-6 bg-theme-border rounded-full"></div>
                     </div>
