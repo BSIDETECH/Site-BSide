@@ -79,7 +79,7 @@ export default function Home() {
             </div>
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 font-handwriting">
               Transformando negócios com <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 pr-4">
                 Data, AI e SaaS Escalável
               </span>
             </h1>
