@@ -154,7 +154,7 @@ export default function Home() {
                   SaaS Proprietário
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold mb-6 font-handwriting">
-                  Comanda Digital
+                  Sidera (Comanda Digital)
                 </h2>
                 <p className="text-lg text-theme-text-muted mb-8 leading-relaxed">
                   A plataforma definitiva para o setor gastronômico. Gestão completa, desde o pedido na mesa até o fechamento de caixa, tudo integrado e em tempo real.
@@ -181,10 +181,10 @@ export default function Home() {
                   </li>
                 </ul>
 
-                <button className="px-6 py-3 rounded-xl bg-theme-bg-alt/50 border border-theme-border hover:bg-theme-bg-alt hover:border-theme-accent/50 text-theme-text font-medium transition-all flex items-center gap-2">
-                  Solicitar Demonstração
+                <a href="/sidera" className="px-6 py-3 rounded-xl bg-theme-bg-alt/50 border border-theme-border hover:bg-theme-bg-alt hover:border-theme-accent/50 text-theme-text font-medium transition-all inline-flex items-center gap-2">
+                  Conhecer o Sidera
                   <ChevronRight size={18} />
-                </button>
+                </a>
               </div>
 
               <div className="lg:w-1/2 p-10 lg:p-16 w-full flex justify-center">
